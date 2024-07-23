@@ -4,7 +4,6 @@ import { FaRegTrashCan } from "react-icons/fa6";
 import { FaPenToSquare } from "react-icons/fa6";
 import { motion, useAnimate, stagger } from "framer-motion";
 
-
 const Note = ({ title, description, id }) => {
   return (
     <div className="note-card  border border-grey-stroke bg-white-card shadow-md min-w-[8rem] w-full rounded-lg p-[1.5rem] cursor-pointer">
