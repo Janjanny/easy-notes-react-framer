@@ -1,34 +1,52 @@
 "use client";
 import React from "react";
 import { FaPlus, FaRegSun } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, useAnimate, stagger } from "framer-motion";
+import { useState, useEffect } from "react";
 
 import Link from "next/link";
 const Navbar = () => {
+
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+
+    animate(".button", {opacity: 1, y:0}, {delay: stagger(.2)})
+
+
+  }, [scope])
+
   return (
     <>
       <div className="sticky top-0 z-[99] w-full bg-white-bg">
         <nav className=" w-10/12 mx-auto py-[1.5rem]  flex justify-between items-center">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div initial={{ opacity: 0, y:20 }} animate={{ opacity: 1, y:0 }} transition={{duration: 0.5}}>
             <Link href={"/"}>
               <h1 className=" font-bold text-[1.8rem]">EasyNotes</h1>
             </Link>
           </motion.div>
 
-          <div className="buttons flex gap-[1rem] ">
+          <motion.div className="buttons flex gap-[1rem] " ref={scope}>
+
+            <motion.div className="button " initial={{ opacity: 0, y: 20 }}>
+
             <Link
               href={"/addNote"}
-              className="flex items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem]"
+              className=" flex items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem]"
             >
               {" "}
               Add Note <FaPlus />{" "}
             </Link>
+            </motion.div>
 
-            <button className="flex items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem] w-max">
+            <motion.div className="button" initial={{ opacity: 0, y: 20 }}>
+            <button className=" flex items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem] w-max" >
               {" "}
               Light <FaRegSun />{" "}
             </button>
-          </div>
+
+            </motion.div>
+          </motion.div>
         </nav>
       </div>
     </>

@@ -2,6 +2,7 @@
 import React from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FaPenToSquare } from "react-icons/fa6";
+import { motion, useAnimate, stagger } from "framer-motion";
 
 
 const Note = ({ title, description, id }) => {
