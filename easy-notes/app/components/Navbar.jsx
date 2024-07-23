@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaPlus, FaRegSun } from "react-icons/fa6";
 import { motion } from "framer-motion";

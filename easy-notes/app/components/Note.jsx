@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FaPenToSquare } from "react-icons/fa6";
+
 
 const Note = ({ title, description, id }) => {
   return (
