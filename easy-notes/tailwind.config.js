@@ -14,11 +14,10 @@ module.exports = {
       },
       colors: {
         "white-bg": "#F5F5F5",
-        "black": "#0A0A0A",
+        black: "#0A0A0A",
         "grey-stroke": "#C6C6C6",
-        "white-card": "#FCFCFC"
-      }
-      
+        "white-card": "#FCFCFC",
+      },
     },
   },
   plugins: [],
