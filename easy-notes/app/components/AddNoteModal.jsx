@@ -3,7 +3,6 @@ import React from "react";
 import { motion, useAnimate, stagger, easeIn } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 import { useEffect } from "react";
-import { transform } from "next/dist/build/swc";
 
 const AddNoteModal = () => {
   const [scope, animate] = useAnimate();
