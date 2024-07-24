@@ -3,6 +3,7 @@ import React from "react";
 import { motion, useAnimate, stagger, easeIn } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 import { useEffect } from "react";
+import { transform } from "next/dist/build/swc";
 
 const AddNoteModal = () => {
   const [scope, animate] = useAnimate();
@@ -18,8 +19,8 @@ const AddNoteModal = () => {
   }, [scope]);
 
   const spanVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: { opacity: 1, x: 0 },
+    default: { opacity: 0, x: -10 },
+    hover: { opacity: 1, x: 0 },
   };
 
   return (
@@ -63,19 +64,15 @@ const AddNoteModal = () => {
         <motion.div
           className="flex justify-end input-div"
           initial={{ opacity: 0, y: 20 }}
-          
         >
           <motion.button
             type="submit"
             className="w-full flex justify-center items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem] bg-black text-white "
             whileHover="hover"
+            initial="default"
           >
             Add Note{" "}
-            <motion.span
-              variants={spanVariants}
-              initial="hidden"
-              whileHover="visible"
-            >
+            <motion.span variants={spanVariants}>
               <FaPlus />
             </motion.span>
           </motion.button>
