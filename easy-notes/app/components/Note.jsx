@@ -9,10 +9,10 @@ const Note = ({ title, description, id }) => {
     <div className="note-card  border border-grey-stroke bg-white-card shadow-md min-w-[8rem] w-full rounded-lg p-[1.5rem] cursor-pointer">
       <div className="w-full h-full relative ">
         <ul className="absolute right-0 text-black text-[1.1rem] flex flex-col gap-[1.3rem] ">
-          <li>
+          <li className=" hover:scale-125 transition-transform ease-linear">
             <FaRegTrashCan />
           </li>
-          <li>
+          <li className="hover:scale-125 transition-transform ease-linear">
             <FaPenToSquare />
           </li>
         </ul>

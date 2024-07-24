@@ -30,7 +30,7 @@ const Navbar = () => {
             <motion.div className="button " initial={{ opacity: 0, y: 20 }}>
               <Link
                 href={"/addNote"}
-                className=" flex items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem]"
+                className=" flex items-center gap-2 border bg-transparent border-black py-[8px] px-[18px] rounded-[2rem] hover:bg-black hover:text-white transition-all ease-linear"
               >
                 {" "}
                 Add Note <FaPlus />{" "}
@@ -38,7 +38,7 @@ const Navbar = () => {
             </motion.div>
 
             <motion.div className="button" initial={{ opacity: 0, y: 20 }}>
-              <button className=" flex items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem] w-max">
+              <button className=" flex items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem] w-max hover:bg-black hover:text-white transition-all ease-linear">
                 {" "}
                 Light <FaRegSun />{" "}
               </button>

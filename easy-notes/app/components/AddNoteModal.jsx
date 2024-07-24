@@ -18,9 +18,10 @@ const AddNoteModal = () => {
   }, [scope]);
 
   const spanVariants = {
-    default: { opacity: 0, x: -10 },
-    hover: { opacity: 1, x: 0 },
+    default: { display: 'none', opacity: 0, x: -10 },
+    hover: { display: 'inline', opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut' } },
   };
+
 
   return (
     <div ref={scope}>
@@ -66,7 +67,7 @@ const AddNoteModal = () => {
         >
           <motion.button
             type="submit"
-            className="w-full flex justify-center items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem] bg-black text-white "
+            className="w-full flex justify-center items-center gap-2 border border-black py-[8px] px-[18px] rounded-[2rem] bg-black text-white transition-all ease-linear "
             whileHover="hover"
             initial="default"
           >
