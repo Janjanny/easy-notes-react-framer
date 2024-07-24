@@ -1,6 +1,6 @@
 "use client";
 import Note from "./components/Note";
-import { motion, useAnimate, stagger } from "framer-motion";
+import { motion, useAnimate, stagger, easeIn } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     animate(
       ".note",
       { opacity: 1, y: 0 },
-      { delay: stagger(0.5), ease: "easeIn" },
+      { delay: stagger(0.2), ease: easeIn },
     );
   }, [scope]);
 
@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <>
-      <div className=" w-full h-screen">
+      <div className=" w-full h-max ">
         <main className=" w-10/12 h-full mx-auto ">
           <div className="pt-[1rem] grid grid-cols-3 gap-4" ref={scope}>
             {notes.map((note, key) => (
