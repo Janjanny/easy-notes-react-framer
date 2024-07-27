@@ -1,5 +1,5 @@
 "use client";
-import Note from "./components/Note";
+import Note from "../components/Note";
 import { motion, useAnimate, stagger, easeIn } from "framer-motion";
 import { useState, useEffect } from "react";
 

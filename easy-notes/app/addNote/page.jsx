@@ -1,5 +1,5 @@
 import React from "react";
-import AddNoteModal from "../components/AddNoteModal";
+import AddNoteModal from "../../components/AddNoteModal";
 
 const AddNote = () => {
   return (
