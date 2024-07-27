@@ -16,14 +16,17 @@ export default function Home() {
 
   const notes = [
     {
+      id: 242312,
       title: "Lorem Ipsum",
       desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, doloremque.",
     },
     {
+      id: 2213124,
       title: "Lorem Ipsum, dolor",
       desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, doloremque. dolor sit amet consectetur adipisicing elit. Quidem, doloremque",
     },
     {
+      id: 12342,
       title: "Lorem Ipsum, dolor",
       desc: "Lorem ipsum, dolor sit amet consectetur ",
     },
@@ -36,7 +39,12 @@ export default function Home() {
           <div className="pt-[1rem] grid grid-cols-3 gap-4" ref={scope}>
             {notes.map((note, key) => (
               <motion.div className="note" initial={{ opacity: 0, y: 40 }}>
-                <Note key={key} title={note.title} description={note.desc} />
+                <Note
+                  key={key}
+                  title={note.title}
+                  description={note.desc}
+                  id={note.id}
+                />
               </motion.div>
             ))}
           </div>

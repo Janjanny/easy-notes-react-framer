@@ -21,8 +21,10 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href={"/"} >
-              <h1 className=" font-bold text-[1.8rem] hover:scale-110 transition-transform ease-in-out">EasyNotes</h1>
+            <Link href={"/"}>
+              <h1 className=" font-bold text-[1.8rem] hover:scale-110 transition-transform ease-in-out">
+                EasyNotes
+              </h1>
             </Link>
           </motion.div>
 

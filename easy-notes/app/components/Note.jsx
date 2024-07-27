@@ -3,6 +3,7 @@ import React from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FaPenToSquare } from "react-icons/fa6";
 import { motion, useAnimate, stagger } from "framer-motion";
+import Link from "next/link";
 
 const Note = ({ title, description, id }) => {
   return (
@@ -13,7 +14,9 @@ const Note = ({ title, description, id }) => {
             <FaRegTrashCan />
           </li>
           <li className="hover:scale-125 transition-transform ease-linear">
-            <FaPenToSquare />
+            <Link href={`/editNote/${id}`}>
+              <FaPenToSquare />
+            </Link>
           </li>
         </ul>
         <h1 className="title font-bold text-xl w-10/12 mb-[.5rem]">{title}</h1>

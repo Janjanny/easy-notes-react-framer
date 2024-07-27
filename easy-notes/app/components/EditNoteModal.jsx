@@ -4,7 +4,7 @@ import { motion, useAnimate, stagger, easeIn } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 import { useEffect } from "react";
 
-const AddNoteModal = () => {
+const EditNoteModal = () => {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const AddNoteModal = () => {
             whileHover="hover"
             initial="default"
           >
-            Add Note{" "}
+            Update Note{" "}
             <motion.span variants={spanVariants}>
               <FaPlus />
             </motion.span>
@@ -86,4 +86,4 @@ const AddNoteModal = () => {
   );
 };
 
-export default AddNoteModal;
+export default EditNoteModal;
