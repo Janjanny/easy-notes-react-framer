@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server";
 import connectMongoDB from "../../../../libs/mongodb";
 import Note from "../../../../models/note";
 
@@ -11,4 +12,9 @@ export async function PUT(request, { params }) {
 }
 
 // function to get a specific note
-export async function GET(request) {}
+export async function GET(request, {params}) {
+    const {id} = params;
+    await connectMongoDB();
+    const note = await Note.findOne({_id: id});
+    return NextResponse.json({note}, {status: 200})
+}
